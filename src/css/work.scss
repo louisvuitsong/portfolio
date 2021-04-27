@@ -1,0 +1,614 @@
+@media (min-width: 1025px) {
+    .work_main{
+        width:100%; height: 100vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        > div {
+            width:65%; height: 600px;
+            margin-left: 7%;
+            .summary{
+                display: flex;
+                justify-content: flex-end;
+                width: 100%; height: 100%;
+                figcaption{
+                    width: 400px; height: 500px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    h2{
+                        font-size: 60px;
+                        font-weight: 500;
+                        text-transform: capitalize;
+                    }
+                    p{
+                        font-family: 'Noto Sans KR', sans-serif;
+                        white-space: pre-line;
+                        color:#555;
+                    }
+                    > span{
+                        font-weight: 500;
+                        text-decoration: underline;
+                        a{
+                            display: inline-block;
+                            vertical-align: middle;
+                            width: 12px; height: 12px;
+                        }
+                    }
+                }
+                > p{
+                    width: 400px; height: 100%;
+                    margin-left: 7%;
+                    img{height: 100%;}
+                }       
+            }       
+            //More
+            > article{
+                width: 100%;
+                position: absolute;
+                left: 0; top: 0;
+                z-index: 100;
+                background-color: #fff;
+                display: none;
+                &.active{
+                    display: block;
+                }
+                > section{
+                    width:100%;
+                    &.cover{
+                        height: 100vh;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                        h2{
+                            font-size: 160px;
+                            font-weight: 500;
+                            text-transform: capitalize;
+                        }
+                        p{
+                            font-family: 'Noto Sans KR', sans-serif;
+                            font-size: 24px;
+                            &:nth-of-type(2){
+                                width: 20px; height: 20px;
+                                position: absolute;
+                                left: 50%; bottom:60px;
+                                animation: wheel 2s ease-in-out infinite;
+                                @keyframes wheel {
+                                    0% {
+                                        transform: translateY(-30px);
+                                    }
+                                    50% {
+                                        transform: translateY(0px); 
+                                    }
+                                    100% {
+                                        transform: translateY(-30px);
+                                    }
+                                }
+                            }
+                            &.back_btn{
+                                width: 25px; height: 25px;
+                                position: absolute;
+                                left: 100px; top: 100px;
+                                z-index: 123;
+                            }
+                        }
+                        a{
+                            font-family: 'Noto Sans KR', sans-serif;
+                            font-size: 24px;
+                            text-decoration: underline;
+                        }
+                    }
+                    
+                    &.detail{
+                        padding: 0 10%;
+                        margin-top: 200px;
+                        .detail_cover{
+                            display: flex;
+                            justify-content: space-between;
+                            margin-bottom: 80px;
+                            .detail_title{
+                                h3{
+                                    font-family: 'Graphik';
+                                    font-size: 80px;
+                                    font-weight: 500;
+                                    margin-bottom: 60px;
+                                }
+                                p{
+                                    font-size: 32px;
+                                    font-weight: 500;
+                                    white-space: pre-line;
+                                }
+                            }
+                            section{
+                                width: 80%; 
+                                padding: 40px 75px;
+                                border: 1px solid #555;
+                            }
+                        }
+                        .detail_exp{
+                            width:80%;
+                            margin-left: 20%;
+                            section{
+                                position: relative;
+                                padding-left: 20%;
+                                &:nth-of-type(1){margin-bottom: 80px;}
+                                h4{
+                                    position: absolute;
+                                    top: 0; left: 0%;
+                                    font-size: 24px;
+                                    font-weight: 500;
+                                }                      
+                                p{
+                                    white-space: pre-line;
+                                    &:nth-of-type(2n+1){
+                                        font-size: 24px;
+                                        margin-bottom: 5px;
+                                    }
+                                    &:nth-of-type(2n){
+                                        font-family: 'Noto Sans KR', sans-serif;
+                                        font-size: 16px;
+                                        line-height: 1.88;
+                                        margin-bottom: 50px;
+                                        color: #555;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.detail_4{
+                        .detail_cover{
+                            section{
+                                p{width: 33px; height: 73px;}
+                            }
+                        }
+                    }
+                }
+            }
+        }   
+        nav{
+            position: absolute;
+            right: 140px; top: 110px;
+            a{
+                display: block;
+                text-transform: capitalize;
+                font-size: 32px;
+                font-weight: 500;
+                margin-bottom: 30px;
+                color: #555;
+                &::before{
+                    content: '';
+                    display: inline-block;
+                    transform: translateY(-4px);
+                    width:7px; height: 7px;
+                    border-radius: 50%;
+                    opacity: 0;
+                    background-color:#000;
+                    margin-right: 10px;
+                }
+                &.active{
+                    transform: scale(1.1);
+                    color: #000;
+                    transition: .3s;
+                    &::before{
+                        opacity: 1;
+                        display: inline-block;
+                    }
+                } 
+            }
+        }
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    .work_main{
+        width:100%; height: 100vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        > div {
+            width: 60%; height: 60%;
+            margin-left: 13%;
+            .summary{
+                display: flex;
+                justify-content: flex-end;
+                width: 100%; height: 100%;
+                figcaption{
+                    width: 50%; height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    h2{
+                        font-size: 40px;
+                        font-weight: 500;
+                        text-transform: capitalize;
+                    }
+                    p{
+                        font-family: 'Noto Sans KR', sans-serif;
+                        white-space: pre-line;
+                        color:#555;
+                    }
+                    > span{
+                        font-weight: 500;
+                        text-decoration: underline;
+                        a{
+                            display: inline-block;
+                            vertical-align: middle;
+                            width: 12px; height: 12px;
+                        }
+                    }
+                }
+                > p{
+                    width: 50%; height: 100%;
+                    padding-left: 3%;
+                    img{height: 100%;}
+                }       
+            }       
+            //More
+            > article{
+                width: 100%;
+                position: absolute;
+                left: 0; top: 0;
+                z-index: 100;
+                background-color: #fff;
+                display: none;
+                &.active{
+                    display: block;
+                }
+                > section{
+                    width:100%;
+                    &.cover{
+                        height: 100vh;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                        h2{
+                            font-size: 160px;
+                            font-weight: 500;
+                        }
+                        p{
+                            font-family: 'Noto Sans KR', sans-serif;
+                            font-size: 24px;
+                            &:nth-of-type(2){
+                                width: 20px; height: 20px;
+                                position: absolute;
+                                left: 50%; bottom:60px;
+                                animation: wheel 2s ease-in-out infinite;
+                                @keyframes wheel {
+                                    0% {
+                                        transform: translateY(-30px);
+                                    }
+                                    50% {
+                                        transform: translateY(0px); 
+                                    }
+                                    100% {
+                                        transform: translateY(-30px);
+                                    }
+                                }
+                            }
+                            &.back_btn{
+                                width: 25px; height: 25px;
+                                position: absolute;
+                                left: 100px; top: 100px;
+                                z-index: 123;
+                            }
+                        }
+                        a{
+                            font-family: 'Noto Sans KR', sans-serif;
+                            font-size: 24px;
+                            text-decoration: underline;
+                        }
+                    }
+                    
+                    &.detail{
+                        padding: 0 10%;
+                        margin-top: 200px;
+                        .detail_cover{
+                            display: flex;
+                            justify-content: space-between;
+                            margin-bottom: 80px;
+                            .detail_title{
+                                h3{
+                                    font-family: 'Graphik';
+                                    font-size: 80px;
+                                    font-weight: 500;
+                                    margin-bottom: 60px;
+                                }
+                                p{
+                                    font-size: 32px;
+                                    font-weight: 500;
+                                    white-space: pre-line;
+                                }
+                            }
+                            section{
+                                width: 80%; 
+                                padding: 40px 75px;
+                                border: 1px solid #555;
+                            }
+                        }
+                        .detail_exp{
+                            width:80%;
+                            margin-left: 20%;
+                            section{
+                                position: relative;
+                                padding-left: 20%;
+                                &:nth-of-type(1){margin-bottom: 80px;}
+                                h4{
+                                    position: absolute;
+                                    top: 0; left: 0%;
+                                    font-size: 24px;
+                                    font-weight: 500;
+                                }                      
+                                p{
+                                    white-space: pre-line;
+                                    &:nth-of-type(2n+1){
+                                        font-size: 24px;
+                                        margin-bottom: 5px;
+                                    }
+                                    &:nth-of-type(2n){
+                                        font-family: 'Noto Sans KR', sans-serif;
+                                        font-size: 16px;
+                                        line-height: 1.88;
+                                        margin-bottom: 50px;
+                                        color: #555;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.detail_4{
+                        .detail_cover{
+                            section{
+                                p{width: 33px; height: 73px;}
+                            }
+                        }
+                    }
+                }
+            }
+        }   
+        nav{
+            position: absolute;
+            right: 7%; top: 7%;
+            z-index: 3;
+            a{
+                display: block;
+                margin-bottom: 30px;
+                text-transform: capitalize;
+                font-size: 24px;
+                font-weight: 500;
+                color: #555;
+                &::before{
+                    content: '';
+                    display: inline-block;
+                    transform: translateY(-4px);
+                    width:7px; height: 7px;
+                    border-radius: 50%;
+                    opacity: 0;
+                    background-color:#000;
+                    margin-right: 10px;
+                }
+                &.active{
+                    transform: scale(1.1);
+                    color: #000;
+                    transition: .3s;
+                    &::before{
+                        opacity: 1;
+                        display: inline-block;
+                    }
+                } 
+            }
+        }
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    .work_main{
+        width:100%; height: 100vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        > div {
+            width: 100%; height: 550px;
+            padding: 0 7%;
+            .summary{
+                display: flex;
+                justify-content: flex-end;
+                width: 100%; height: 100%;
+                figcaption{
+                    width: 50%; height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    h2{
+                        font-size: 40px;
+                        font-weight: 500;
+                        text-transform: capitalize;
+                        white-space: pre-line;
+                    }
+                    p{
+                        font-family: 'Noto Sans KR', sans-serif;
+                        white-space: pre-line;
+                        color:#555;
+                    }
+                    > span{
+                        font-weight: 500;
+                        text-decoration: underline;
+                        a{
+                            display: inline-block;
+                            vertical-align: middle;
+                            width: 12px; height: 12px;
+                        }
+                    }
+                }
+                > p{
+                    width: 50%; height: 100%;
+                    padding-left: 5%;
+                    img{height: 100%;}
+                }       
+            }       
+            //More
+            > article{
+                width: 100%;
+                position: absolute;
+                left: 0; top: 0;
+                z-index: 100;
+                background-color: #fff;
+                display: none;
+                &.active{
+                    display: block;
+                }
+                > section{
+                    width:100%;
+                    &.cover{
+                        height: 100vh;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                        h2{
+                            font-size: 160px;
+                            font-weight: 500;
+                        }
+                        p{
+                            font-family: 'Noto Sans KR', sans-serif;
+                            font-size: 24px;
+                            &:nth-of-type(2){
+                                width: 20px; height: 20px;
+                                position: absolute;
+                                left: 50%; bottom:60px;
+                                animation: wheel 2s ease-in-out infinite;
+                                @keyframes wheel {
+                                    0% {
+                                        transform: translateY(-30px);
+                                    }
+                                    50% {
+                                        transform: translateY(0px); 
+                                    }
+                                    100% {
+                                        transform: translateY(-30px);
+                                    }
+                                }
+                            }
+                            &.back_btn{
+                                width: 25px; height: 25px;
+                                position: absolute;
+                                left: 100px; top: 100px;
+                                z-index: 123;
+                            }
+                        }
+                        a{
+                            font-family: 'Noto Sans KR', sans-serif;
+                            font-size: 24px;
+                            text-decoration: underline;
+                        }
+                    }
+                    
+                    &.detail{
+                        padding: 0 10%;
+                        margin-top: 200px;
+                        .detail_cover{
+                            display: flex;
+                            justify-content: space-between;
+                            margin-bottom: 80px;
+                            .detail_title{
+                                h3{
+                                    font-family: 'Graphik';
+                                    font-size: 80px;
+                                    font-weight: 500;
+                                    margin-bottom: 60px;
+                                }
+                                p{
+                                    font-size: 32px;
+                                    font-weight: 500;
+                                    white-space: pre-line;
+                                }
+                            }
+                            section{
+                                width: 80%; 
+                                padding: 40px 75px;
+                                border: 1px solid #555;
+                            }
+                        }
+                        .detail_exp{
+                            width:80%;
+                            margin-left: 20%;
+                            section{
+                                position: relative;
+                                padding-left: 20%;
+                                &:nth-of-type(1){margin-bottom: 80px;}
+                                h4{
+                                    position: absolute;
+                                    top: 0; left: 0%;
+                                    font-size: 24px;
+                                    font-weight: 500;
+                                }                      
+                                p{
+                                    white-space: pre-line;
+                                    &:nth-of-type(2n+1){
+                                        font-size: 24px;
+                                        margin-bottom: 5px;
+                                    }
+                                    &:nth-of-type(2n){
+                                        font-family: 'Noto Sans KR', sans-serif;
+                                        font-size: 16px;
+                                        line-height: 1.88;
+                                        margin-bottom: 50px;
+                                        color: #555;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.detail_4{
+                        .detail_cover{
+                            section{
+                                p{width: 33px; height: 73px;}
+                            }
+                        }
+                    }
+                }
+            }
+        }   
+        nav{
+            width: 70%;
+            position: absolute;
+            right: 7%; top: 7%;
+            z-index: 4;
+            display: flex;
+            justify-content: flex-end;
+            a{
+                display: inline-block;
+                margin-bottom: 30px;
+                padding-left: 10%; 
+                text-transform: capitalize;   
+                font-size: 24px;
+                font-weight: 500;
+                color: #555;
+                &::before{
+                    content: '';
+                    display: inline-block;
+                    transform: translateY(-4px);
+                    width:7px; height: 7px;
+                    border-radius: 50%;
+                    opacity: 0;
+                    background-color:#000;
+                    margin-right: 10px;
+                }
+                &.active{
+                    transform: scale(1.1);
+                    color: #000;
+                    transition: .3s;
+                    &::before{
+                        opacity: 1;
+                        display: inline-block;
+                    }
+                } 
+            }
+        }
+    }
+}
