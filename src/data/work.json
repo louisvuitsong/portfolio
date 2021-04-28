@@ -1,0 +1,303 @@
+{
+    "data":[
+    {
+        "summary":{
+            "navTitle": "dior",
+            "title": "dior 리뉴얼",
+            "exp": "기존의 명품 웹사이트들은 대다수가 흰색바탕의 \n 정적인 페이지들이 대부분입니다.\n 검은색 위주의 고급스러움과 인터렉티브한 움직임을 통해\n 쇼핑하는 즐거움을 올렸습니다.",
+            "skills": "HTML5, CSS, Java script, Jquery",
+            "color": "#000 고급, 신비감, 중후함 \n #fff  검정색과 대조\n #222 검정색과 튀지않게 어우러지며 자연스러움,#000보다 높은명도",
+            "font": "default 'NanumMyeongjo': 20px\n 'Vanity-LightWide': 120px\n 'Open Sans, sans-serif': 16px",
+            "image": "/source/work/perfume.jpg"
+        },
+        "cover":{
+            "title": "Dior",
+            "sub": "웹사이트 리뉴얼 프로젝트",
+            "link": "https://louisvuitsong.github.io/dior/",
+            "screenImage": "/source/work/dior/screen.jpg"
+        },
+        "detail": [
+            {
+                "num": "01.",
+                "title": "Ajax를 이용한\n 제품 슬라이드,\n 제품상세 팝업창",
+                "exp": [
+                    {
+                        "subTitle": "Requst",
+                        "expText" : [
+                        "각 카테고리별  제품 수에 맞는 슬라이드 카드를 생성해야한다.",
+                        "son파일의 제품데이터를 forEach문으로 필요한 갯수만큼 카드를 만든다.",
+                        "슬라이드를 드래그해서 둘러볼 수 있게 해야한다.",
+                        "제이쿼리 UI를 가져와 draggable 메소드를 사용했습니다.\n X(가로)방향으로 움직일 수 있게 제어했습니다.\n 슬라이드 카드뿐만 아니라 사이의 빈공간도 드래그를 하면 움직일 수 있게 했습니다.",
+                        "제품 카드를 클릭시 제품 상세화면이 팝업으로 나와야한다.",
+                        "제품의 상세정보를 담은 json파일을 만들고 제품별 index넘버를 맞춰서 데이터를 입력했습니다. 카드 클릭시 해당 제품의 인덱스 넘버를 받아 json파일에서 데이터를 찾고 팝업 화면에 뿌려줄 수 있게했습니다."
+                        ]
+                    },
+                    {
+                        "subTitle": "Key point",
+                        "expText": [
+                        "문제점",
+                        "click 이벤트와 draggable의 이벤트가 동시에 발생해 드래그를 하기위해 클릭을 하면 팝업창도 같이 나온다.",
+                        "해결",
+                        "draggable의 start,drag,stop 중에서 stop상황에서 click이벤트가 중복되는것을 확인했습니다.\n state라는 변수를 생성하고 drag stop 시에 'drag'를 state에 담게했습니다.\n click이벤트의 함수에는 state가 'drag'를 담고 있을시에 return 키워드를 이용해\n 함수가 실행되는 것을 중지시켰습니다.\n 드래그 후 제품 클릭이 될 수 있게 setTimeout으로 잠깐의 딜레이를 주어\n state를 빈 상태로 만들어 제품 팝업을 띄울 수 있게 했습니다."
+                        ]
+                    }
+                ] 
+            },
+            {
+                "num": "02.",
+                "title": "Indicater",
+                "exp": [
+                    {
+                        "subTitle": "Requst",
+                        "expText" : [
+                            "버튼 클릭시 해당 섹션으로 슬라이드가 이동되어야한다.",
+                            "Java script로 각 section의 index번호를 잡고 각 버튼에 맞는 슬라이드 위치를 제어했습니다.",
+                            "인디케이터가 좌우로 움직이며 해당 페이지에 맞는 이름으로 변경되어야한다.",
+                            "슬라이드와 같이 인디케이터의 위치를 지정하고  각 버튼의 index 번호를 받아 이동해 위치할 수 있게했습니다.",
+                            "페이지 슬라이드는 마우스 휠 스크롤로도 이동이 가능하기때문에\n 휠 스크롤 시에도 인디케이터가 알맞은 버튼의 위치로 이동하게 해야한다.",
+                            "휠 스크롤 이벤트에 발생되는 index번호로 슬라이드 제어와 같이 인디케이터도 이동할 수 있도록 했습니다."
+                        ]
+                    }
+                ]
+            },
+            {
+                "num": "03.",
+                "title": "Java script를 통한\n HTML 모듈화",
+                "exp": [
+                    {
+                        "subTitle": "Key point",
+                        "expText": [
+                        "문제점",
+                        "header와 footer는 모든 페이지에서 중복된다.\n 각 html파일에 넣게 되면 코드의 부피가 커진다. 또한, 변경사항이 생길경우 일일이 수정을 해야하기 때문에 관리가 힘들어진다.",
+                        "해결",
+                        "슬라이드와 같이 인디케이터의 위치를 지정하고  각 버튼의 index 번호를 받아 이동해 위치할 수 있게했습니다.",
+                        "header와 footer를 담은 html파일을 따로 만들었습니다.\n 모든 페이지에 적용되는 common.js에서 load이벤트를 사용하여 header와 footer를 불러내어 적용시켰습니다."
+                        ]
+                    }
+                ] 
+            },
+            {
+                "num": "04.",
+                "title": "@keyframes를 이용한\n 애니메이션",
+                "exp": [
+                    {
+                        "subTitle": "Key point",
+                        "expText": [
+                            "기능제어",
+                            "마우스 휠 스크롤 아이콘을 @keyframe에서 0%, 50%, 100% 때의 위치를 transfrom으로 지정했습니다.\n animation으로 2초와 ease-in-out, infinite로 자연스럽게 반복 할 수 있게 만들었습니다."
+                        ]
+                    } 
+                ]
+            },
+            {
+                "num": "05.",
+                "title": "API를 이용한\n 슬라이드 제작",
+                "exp": [
+                    {
+                        "subTitle": "Key point",
+                        "expText": [
+                        "슬라이드 제어",
+                        "api의 css와 js 파일을 이용해 화살표 대신 next,previous 버튼으로 대체,\n js로 4개의 카드씩 보이고 슬라이드 시키게 만들었습니다.\n 스크립트로  인디케이터, 오토플레이, fadeIn,fadeOut 방식, 세로 슬라이드로 변경도 가능합니다.",
+                        "팝업",
+                        "카드의 인덱스 넘버와 이미지 파일의 이름을 맞추어\n 클릭시 해당 이미지가 확대되는 팝업이 나올 수 있게했습니다."
+                        ]
+                    }
+                ] 
+            },
+            {
+                "num": "06.",
+                "title": "iframe를 이용한\n SNS활용",
+                "exp": [
+                    {
+                        "subTitle": "Key point",
+                        "expText": [
+                        "Instagram, Youtube, etc",
+                        "외부의 데이터(instagram, youtube 등)을 가져와 필요한 용도로 사용할 수 있습니다."
+                        ]
+                    } 
+                ]
+            },
+            {
+                "num": "07.",
+                "title": "hover를 이용한\n 자연스러운 애니메이션과\n Java script를 통한\n 비디오 제어.",
+                "exp": [
+                    {
+                        "subTitle": "Key point",
+                        "expText": [
+                        "Instagram, Youtube, etc",
+                        "외부의 데이터(instagram, youtube 등)을 가져와 필요한 용도로 사용할 수 있습니다."
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "summary": {
+            "navTitle": "fuoripista",
+            "title": "fuoripista \n 클론코딩",
+            "exp": "바이크 관련 헬스케어 제품을 홍보하는 홈페이지입니다.\n 슬라이드 제어, 버튼에 따른 변화 같은 동적 기능이\n 다양하게 분포되어 있어 클론 코딩 프로젝트로\n 선정하였습니다.",
+            "skills": "HTML5, SCSS, Java script, Jquery, Webpack, Babel",
+            "color": "#0d0d0d\n #fff \n #c39d42",
+            "font": "default 'domaine sans display': 20px\n 'grot10': 120px\n 'hijrnotes': 16px",
+            "image": "/source/work/fuoripista.jpg"
+        },
+        "cover": {
+            "title": "Fuoripista",
+            "sub": "클론코딩 프로젝트",
+            "link": "https://louisvuitsong.github.io/fuoripista/",
+            "screenImage": "/source/work/fuoripista/screen.jpg"
+        },
+        "detail": [
+            {
+                "num": "01.",
+                "title": "Mouse wheel scroll Slide\n (메인페이지)",
+                "exp": [
+                    {
+                        "subTitle": "Key point",
+                        "expText": [
+                            "마우스 휠 스크롤시 슬라이드가 한 칸식 올라갈것.",
+                            "json파일의 제품데이터를 forEach문으로 필요한 갯수만큼 카드를 만든다.",
+                            "4번째 슬라이드가 끝나고 브랜드로고 슬라이드와 footer부분에서는\n 기본의 스크롤 형태로 올리거나 내릴 수 있게한다.",
+                            "다시 올린경우에 한칸씩 올리는 이벤트를 주었다.\n 휠 스크롤 이벤트가 슬라이드 영역 안 일때와 밖일때의 조건을 주고\n 안에 있을땐 슬라이드가 밖일땐 스크롤 처럼 움직일 수 있도록 animate를 주었다."
+                        ]
+                    },
+                    {
+                        "subTitle": "Key point",
+                        "expText": [
+                            "문제점",
+                            "마우스 휠 스크롤시 이벤트가 중복발생되어 슬라이드가 한칸씩 움직이지 못한다.",
+                            "해결",
+                            "setTimeout과 clearTimeout으로 여러번 발생된 이벤트 중 마지막 하나만 발생되게 만들었다."
+                        ]
+                    }
+                ]
+            },
+            {
+                "num": "02.",
+                "title": "드래그 슬라이드",
+                "exp": [
+                    {
+                        "subTitle": "Key point",
+                        "expText": [
+                        "드래그시 한칸씩 이동하게 해야한다.",
+                        "드래그 시작과 끝났을때의 마우스 포인트의 위치(pageX)값을 받아온다.\n 오른쪽에서 왼쪽으로 드래그했을땐 시작위치가 더 크고 반대 방향으로 했을땐 종료위치가\n 더 크다. 이것을 조건으로 드래그 방향을 확인후 선언된 slideNum값이 더하거나 빠짐에 따라\n 슬라이드가 이동하게했다.\n 한 번 드래그했을때 드래그 크기에 상관없이 한 카드씩 이동하게 된다.",
+                        "중심에 있는 슬라이드 카드만 보이고 나머지는 보이지 않게 처리한다",
+                        "슬라이드와 같이 인디케이터의 위치를 지정하고  각 버튼의 index 번호를 받아 이동해 위치할 수 있게했습니다.",
+                        "로고 밑의 내용은 class active를 가지고 있을때 display: block으로 보일 수 있게했다.\n 슬라이드가 이동함에 따라 바뀌는 slideNum값을 슬라이드 카드의 index으로 대입해\n 해당 카드가 중앙에 왔을때 class active를 입력하게 했다.\n 다음 카드로 넘어갈때 기존의 카드는 class active를 없애주어 다시 display: none으로\n 보이지 않게했다."
+                        ]
+                    }
+                ] 
+            },
+            {
+                "num": "03.",
+                "title": "가로형 웹페이지",
+                "exp": [
+                    {
+                        "subTitle": "Key point",
+                        "expText": [
+                        "스크롤바를 없애고 마우스 휠 스크롤시 가로로 슬라이드 되게한다.",
+                        "마우스 휠 스크롤시 발생되는 originalEvent의 wheelDelta값을 변수 delta에 넣는다.\n 마우스 휠을 위로 변수 num을 마우스 휠 스크롤 횟수에 따라 1씩오르거나 내리게 한다.\n 메인화면을 스크립트로 num값에 따라 일정량 좌우로 움직이게 한다.",
+                        "페이지의 처음과 끝을 넘지 않게 만들어야한다.",
+                        "num값이 0보다 작아 더 왼쪽으로 넘어가지 않게 조건을건다.\n 또한, 화면이동식이 (num * 100)px보다 마지막 컨텐츠의의 posiiton().left값을 넘지 않게\n 조건을 걸어 우측끝에 닿았을때 스크롤 이벤트가 발생되지 않게 했다."
+                        ]
+                    }
+                ] 
+            },
+            {
+                "num": "04.",
+                "title": "스크롤시 올라오는 슬라이드",
+                "exp": [
+                    {
+                        "subTitle": "Key point",
+                        "expText": [
+                        "일정 구간을 지나가면 슬라이드가 스크롤에 맞춰 아래에서 위로 올라와야한다.",
+                        "슬라이드가 offset Left가 400이 되었을때 부터 올라왔을때 가장 이상적이라고 판단.\n 변수를 정해 마우스 휠 스크롤시에 변수의 숫자가 오르거나 내리게 했다.\n 변수의 int 데이터로 offset Left 400을 지날때 슬라이드가 작동하도록 조건을 걸었다.\n 변수의 int 데이터를 통해 css를 조정해 슬라이드가 적당한 만큼 이동하게 했다."
+                        ]
+                    }
+                ]
+            },
+            {
+                "num": "05.",
+                "title": "버튼활성화, 슬라이드",
+                "exp": [
+                    {
+                        "subTitle": "Key point",
+                        "expText": [
+                        "위,아래 화살표 누르는 경우 위아래로 슬라이드, 위와 아래 더 안움직이게 만들어야한다.",
+                        "----------------------------------------",
+                        "첫번째슬라이드 위방향 화살표, 마직막 슬라이드 아래방향화살표 비활성화된 것을 알 수 있게 피드백을 주어야한다.",
+                        "-----------------------------------------"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "summary":{
+            "navTitle": "covid19",
+            "title": "COVID-19 \n 국내현황(React)",
+            "exp": "코로나 바이러스로 인해\n 현 상황에 대한 정보를 수시로\n 확인하는게 습관이 된 요즘입니다.\n\n 국내현황과 지역별 현황의 데이터를 볼 수 있습니다. 또한, 데이터들을 그래프로 나타내어 보기쉬운 시각데이터로 나타냈습니다.",
+            "color": "데이터 출처: (국내, 지역별)굿바이 코로나, (국내)Corona19api.com",
+            "font": "각 api별 기준 날짜가 달라 데이터가 상이 할 수 있습니다.",
+            "image": "/source/work/perfume.jpg"
+        },
+        "cover":{
+            "title": "COVID-19 \n 국내현황",
+            "sub": "React",
+            "link": "",
+            "screenImage": "/source/work/react/screen.jpg"
+        },
+        "detail": [
+            {
+                "num": "01.",
+                "title": "국내현황",
+                "exp": [
+                    {
+                        "subTitle": "Request",
+                        "expText": [
+                        "국내 현황 데이터.",
+                        "son파일의 제품데이터를 forEach문으로 필요한 갯수만큼 카드를 만든다.",
+                        "데이터를 도넛형태의 그래프로 나타내야한다.",
+                        "제이쿼리 UI를 가져와 draggable 메소드를 사용했습니다.\n X(가로)방향으로 움직일 수 있게 제어했습니다.\n 슬라이드 카드뿐만 아니라 사이의 빈공간도 드래그를 하면 움직일 수 있게 했습니다."
+                        ]
+                    } 
+                ]
+            },
+            {
+                "num": "02.",
+                "title": "데이터 그래프",
+                "exp": [
+                    {
+                        "subTitle": "Requst",
+                        "expText": [
+                        "그래프",
+                        "각 해당되는 데이터들을 가져와~",
+                        "국내 누적 확진자",
+                        "제이쿼리 UI를 가져와 draggable 메소드를 사용했습니다.\n X(가로)방향으로 움직일 수 있게 제어했습니다.\n 슬라이드 카드뿐만 아니라 사이의 빈공간도 드래그를 하면 움직일 수 있게 했습니다."
+                        ]
+                    } 
+                ]
+            },
+            {
+                "num": "03.",
+                "title": "도시별 확진자,\n 완치자 현황",
+                "exp": [
+                    {
+                        "subTitle": "Request",
+                        "expText": [
+                        "도시를 선택할 수 있는 select",
+                        "map을 이용해 데이터를 가져와 도시 영문명을 value로 한글명을 제목으로 뿌려주고 onChange로 도시 선택시 도시명을 가지고 있는 변수 city가 수정되는 함수를 넣어줬다",
+                        "도시 선택시 해당 데이터가 업데이트 되어야한다.",
+                        "onChange가 작동되면 areaChange라는 함수가 발생됩니다. areaChange함수는 option의 value(영문 도시명)을 가져와 useState를 사용하여 변수 city가 수정되게 했습니다. useEffect를 사용하여 변경된 데이터가 화면에 다시 뿌려질 수 있게 했습니다."
+                        ]
+                    } 
+                ]
+            }
+
+        ]
+    }
+]
+
+}
