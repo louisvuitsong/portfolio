@@ -1,0 +1,17 @@
+프로젝트명: furoipista copy 
+프로젝트 기간:  2021.02 ~ 2021.03
+
+개요: 
+	
+
+컬러 팔렛트 :
+ 	#000 고급, 신비감, 중후함
+	
+
+기술 스택:
+	HTML5, CSS(SASS)), Java Script, Jquery
+
+사용 폰트: 
+	 "grot10"
+	 "domaine sans display"
+	 "hijrnotes"
